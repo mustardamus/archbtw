@@ -10,3 +10,4 @@ source ./setup/screen-sharing.sh
 source ./setup/terminal.sh
 source ./setup/lightdm.sh
 source ./setup/web-browser.sh
+source ./setup/snapshots.sh
