@@ -1,0 +1,4 @@
+.thunar .standard-view,
+.thunar .standard-view * {
+  background-image: none;
+}

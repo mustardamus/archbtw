@@ -1,0 +1,5 @@
+[[snippets]]
+prefix = "ll"
+scope = ["typescript"]
+body = 'console.log($1)'
+description = "console.log()"

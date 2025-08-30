@@ -1,0 +1,25 @@
+font=Inconsolata Nerd Font 11
+sort=-time
+layer=overlay
+anchor=bottom-right
+width=300
+height=110
+margin=10,0,10,10
+outer-margin=10
+padding=10
+border-radius=2
+border-size=1
+background-color=#111111
+border-color=#000000
+icons=0
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+
+[urgency=high]
+border-color=#ff9a9e
+default-timeout=0
+
+[summary~="log-.*"]
+border-color=#ffe6a7
+

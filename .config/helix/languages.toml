@@ -1,0 +1,281 @@
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
+feature_words = true                 # enable completion by word
+feature_snippets = true              # enable snippets
+snippets_first = true                # completions will return before snippets by default
+snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false        # enable "unicode input"
+feature_paths = true                 # enable path completion
+feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
+
+[[language]]
+name = "bash"
+formatter = { command = 'shfmt' }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "yaml"
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = true
+
+[language-server.postgrestools]
+command = "postgrestools"
+args = ["lsp-proxy"]
+
+[[language]]
+name = "sql"
+language-servers = ["postgrestools"]
+formatter = { command = "sql-formatter", args = ["--language", "postgresql"] }
+auto-format = true
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+
+[language-server.deno-lsp.config.deno]
+enable = true
+unstable = true
+suggest.imports.hosts = { "https://deno.land" = true }
+inlayHints.parameterNames.enabled = "all"
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[language-server.typescript-language-server.config.typescript]
+inlayHints.includeInlayParameterNameHints = "all"
+inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName = true
+inlayHints.includeInlayFunctionParameterTypeHints = true
+inlayHints.includeInlayVariableTypeHints = true
+inlayHints.includeInlayPropertyDeclarationTypeHints = true
+inlayHints.includeInlayFunctionLikeReturnTypeHints = true
+inlayHints.includeInlayEnumMemberValueHints = true
+
+[[language]]
+name = "typescript"
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
+auto-format = true
+language-servers = ["scls", "deno-lsp", "tailwindcss-ls"]
+file-types = ["ts", "tsx"]
+formatter = { command = "deno", args = ["fmt", "-"] }
+
+[[language]]
+name = "javascript"
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
+auto-format = true
+language-servers = ["scls", "deno-lsp", "tailwindcss-ls"]
+file-types = ["js", "jsx"]
+formatter = { command = "deno", args = ["fmt", "-"] }
+
+[[language]]
+name = "typescript"
+roots = ["package.json", "tsconfig.json"]
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome",
+  "scls"
+]
+file-types = ["ts", "tsx"]
+
+[[language]]
+name = "javascript"
+roots = ["package.json"]
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome",
+  "scls"
+]
+file-types = ["js", "jsx", "mjs"]
+
+# TODO make this work, tried 1001 ways tho
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+# conifg = {}
+
+# [language-server.tailwindcss-classes-ls]
+# command = "/home/user/Projects/tailwindcss-classes-ls/tailwindcss-classes-ls"
+
+[[language]]
+name = "html"
+language-servers = [
+  "scls",
+  "tailwindcss-ls",
+  # "tailwindcss-classes-ls",
+  "vscode-html-language-server",
+]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "vento"
+language-id = "html"
+language-servers = ["scls", "vscode-html-language-server", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "css"
+language-servers = ["scls", "vscode-css-language-server", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = { typescript = { tsdk = "/usr/lib/node_modules/typescript/lib/" } }
+
+[[language]]
+name = "astro"
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+language-servers = ["scls", "astro-ls", "tailwindcss-classes-ls"]
+formatter = { command = "prettier", args = [
+  "--plugin",
+  "/usr/lib/node_modules/prettier-plugin-astro/dist/index.js",
+  "--parser",
+  "astro",
+] }
+auto-format = true
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+usePlaceholders = true
+completeUnimported = true
+staticcheck = true
+matcher = "Fuzzy"
+experimentalPostfixCompletions = true
+gofumpt = true
+
+[language-server.gopls.config.analyses]
+nilness = true
+unusedparams = true
+unusedwrite = true
+useany = true
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+compositeLiteralTypes = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+
+[language-server.golangci-lint-lsp.config]
+command = [
+  "golangci-lint",
+  "run",
+  "--output.json.path",
+  "stdout",
+  "--show-stats=false",
+  "--issues-exit-code=1",
+]
+
+[[language]]
+name = "go"
+scope = "source.go"
+injection-regex = "go"
+file-types = ["go"]
+roots = ["go.work", "go.mod"]
+auto-format = true
+comment-token = "//"
+language-servers = ["gopls", "golangci-lint-lsp"]
+
+[[language]]
+name = "html"
+language-servers = ["scls", "vscode-html-language-server", "tailwindcss-ls"]
+roots = ["go.work", "go.mod"]
+formatter = { command = "prettier", args = [
+  "--plugin",
+  "/usr/lib/node_modules/prettier-plugin-go-template/lib/index.js",
+  "--parser",
+  "go-template",
+] }
+auto-format = true
+
+[language-server.solargraph]
+command = "solargraph"
+args = ["stdio"]
+
+[language-server.solargraph.config]
+diagnostics = true
+formatting = false
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+
+[language-server.rubocop]
+command = "bundle"
+args = ["exec", "rubocop", "--lsp"]
+
+# [[language]]
+# name = "ruby"
+# scope = "source.ruby"
+# injection-regex = "ruby"
+# file-types = ["rb", "rake", "rakefile", "gemfile", "gemspec"]
+# roots = ["Gemfile", "Rakefile", ".ruby-version"]
+# comment-token = "#"
+# auto-format = true
+# language-servers = ["scls", "ruby-lsp", "solargraph"]
+# formatter = { command = "rubocop", args = [
+#   "--stdin",
+#   "foo.rb",
+#   "-a",
+#   "--stderr",
+#   "--fail-level",
+#   "fatal",
+#   "--server",
+# ] }
+
+# [[language]]
+# name = "erb"
+# scope = "text.html.erb"
+# injection-regex = "erb"
+# file-types = ["erb"]
+# roots = ["Gemfile", "Rakefile", ".ruby-version"]
+# comment-token = "<%#"
+# auto-format = true
+# language-servers = ["scls", "tailwind-ls"]
+# formatter = { command = "erb-formatter", args = ["--stdin"] }
+
+[language-server.standardrb]
+command = "standardrb"
+args = ["--lsp"]
+
+[[language]]
+name = "ruby"
+language-servers = ["standardrb", "ruby-lsp", "solargraph"]
+auto-format = true

@@ -1,0 +1,122 @@
+# Restic backup exclude patterns
+
+# Cache directories (absolute and relative paths)
+**/.cache
+**/.cache/**
+**/cache
+**/cache/**
+
+# Temporary files
+**/.tmp
+**/.tmp/**
+**/tmp
+**/tmp/**
+**/.temp
+**/.temp/**
+
+# Node.js
+**/node_modules
+**/node_modules/**
+**/.npm
+**/.npm/**
+**/.yarn
+**/.yarn/**
+**/.pnpm
+**/.pnpm/**
+
+# Rust
+**/target
+**/target/**
+
+# Go
+**/bin
+**/bin/**
+**/pkg
+**/pkg/**
+
+# Python
+**/__pycache__
+**/__pycache__/**
+**/.venv
+**/.venv/**
+**/venv
+**/venv/**
+
+# Build artifacts
+**/build
+**/build/**
+**/dist
+**/dist/**
+**/.next
+**/.next/**
+
+# IDEs and editors
+**/.vscode
+**/.vscode/**
+**/.idea
+**/.idea/**
+**/.vs
+**/.vs/**
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# Large media files
+**/*.iso
+**/*.img
+**/*.dmg
+
+# Virtual machines
+**/*.vdi
+**/*.vmdk
+**/*.vhd
+
+# Docker
+**/.docker
+**/.docker/**
+
+# Logs
+**/*.log
+**/logs
+**/logs/**
+
+# Trash
+**/.Trash
+**/.Trash/**
+**/.local/share/Trash
+**/.local/share/Trash/**
+
+# Browser caches
+**/.mozilla/**/Cache*
+**/.mozilla/**/Cache*/**
+**/.librewolf/**/Cache*
+**/.librewolf/**/Cache*/**
+**/.config/chromium/**/Cache*
+**/.config/chromium/**/Cache*/**
+
+# Steam
+**/.steam/steamapps
+**/.steam/steamapps/**
+
+# Additional common caches
+**/.cargo/registry
+**/.cargo/registry/**
+**/.rustup
+**/.rustup/**
+**/.go/pkg
+**/.go/pkg/**
+
+# User directories to exclude
+**/Desktop
+**/Desktop/**
+**/Downloads
+**/Downloads/**
+
+**/.hex
+**/.bun
+**/.bundle
+**/.docker
+**/.fltk
+**/.mix
+**/.npm
