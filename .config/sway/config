@@ -32,6 +32,9 @@ exec wl-paste -t text --watch clipman store --no-persist
 exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
+# turn of the "always on" led for microphone muting. check state in waybar
+exec bash -c "echo 0 | sudo tee /sys/class/leds/platform::micmute/brightness"
+
 # open apps on specific workspace
 # find app_id/title with `swaymsg -t get_tree`
 assign [title="Transmission"] 9
