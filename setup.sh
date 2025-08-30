@@ -16,3 +16,4 @@ source ./setup/firewall.sh
 source ./setup/multimedia.sh
 source ./setup/languages.sh
 source ./setup/docker.sh
+source ./setup/battery.sh
