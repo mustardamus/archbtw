@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
 # version control
-if ! command -v git &> /dev/null; then
-  sudo pacman -S --noconfirm git
-fi
+sudo pacman -S --noconfirm git
 
 # git tui tool
-if ! command -v lazygit &> /dev/null; then
-  sudo pacman -S --noconfirm lazygit
-fi
+sudo pacman -S --noconfirm lazygit
 
 read -p "Git Name: " git_name
 read -p "Git E-Mail: " git_email
