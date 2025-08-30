@@ -6,9 +6,10 @@ sudo pacman -S --needed --noconfirm acpi
 # protect from kernel vulnerabilities
 sudo pacman -S --needed --noconfirm amd-ucode
 
-# cpu speed and power optimizer for more battery life
-yay -S --needed --noconfirm auto-cpufreq-git
+# battery optimizing tool
+sudo pacman -S --needed --noconfirm tlp
 
-echo "Enable auto-cpufreq on startup..."
-sudo systemctl enable auto-cpufreq
+echo "Enable tlp on startup..."
+sudo systemctl start tlp
+sudo systemctl enable tlp
 
