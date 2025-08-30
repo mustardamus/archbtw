@@ -29,3 +29,10 @@ yay -S --needed --noconfirm qogir-gtk-theme
 
 # dark flat qt kvantum theme style
 yay -S --needed --noconfirm kvantum-theme-qogir-git
+
+# manage clipboard from the command line
+sudo pacman -S --needed --noconfirm xclip
+
+# same as xlip, but for wayland
+sudo pacman -S --needed --noconfirm wl-clipboard
+

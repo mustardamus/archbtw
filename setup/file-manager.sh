@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# file manager
-sudo pacman -S --needed --noconfirm thunar
+# file manager and volume manager
+sudo pacman -S --needed --noconfirm thunar thunar-volman
 
 # for automatically mounting external drives
 sudo pacman -S --needed --noconfirm gvfs

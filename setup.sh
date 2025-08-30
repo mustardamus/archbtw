@@ -13,3 +13,4 @@ source ./setup/web-browser.sh
 source ./setup/snapshots.sh
 source ./setup/ssh.sh
 source ./setup/firewall.sh
+source ./setup/multimedia.sh
