@@ -197,3 +197,11 @@ smart_borders on
 default_border pixel 1
 titlebar_padding 8 2
 titlebar_border_thickness 2
+
+# Prevent crashes on hotplug by explicitly configuring outputs
+output * scale 1
+
+# Configure external monitor positioning (adjust as needed)
+output DP-1 position 1366,0
+output DP-2 position 1366,0
+output HDMI-A-1 position 1366,0

@@ -120,3 +120,7 @@
 **/.fltk
 **/.mix
 **/.npm
+**/.mise
+**/.mise/**
+**/.local/state
+**/.local/state/**
