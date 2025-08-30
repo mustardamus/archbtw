@@ -8,3 +8,5 @@ source ./setup/sway.sh
 source ./setup/file-manager.sh
 source ./setup/screen-sharing.sh
 source ./setup/terminal.sh
+source ./setup/lightdm.sh
+source ./setup/web-browser.sh
