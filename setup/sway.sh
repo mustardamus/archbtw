@@ -1,31 +1,31 @@
 #!/usr/bin/env bash
 
 # bar for wayland
-sudo pacman -S --noconfirm waybar
+sudo pacman -S --needed --noconfirm waybar
 
 # set gtk theme and icons, cursor
-sudo pacman -S --noconfirm nwg-look
+sudo pacman -S --needed --noconfirm nwg-look
 
 # nice flat icons
-sudo pacman -S --noconfirm papirus-icon-theme
+sudo pacman -S --needed --noconfirm papirus-icon-theme
 
 # wayland notification daemon
-sudo pacman -S --noconfirm mako
+sudo pacman -S --needed --noconfirm mako
 
 # application launcher
-sudo pacman -S --noconfirm fuzzel
+sudo pacman -S --needed --noconfirm fuzzel
 
 # monospace font with icons
-sudo pacman -S --noconfirm ttf-inconsolata-nerd
+sudo pacman -S --needed --noconfirm ttf-inconsolata-nerd
 
 # sans/serif font with icons
-sudo pacman -S --noconfirm ttf-noto-nerd
+sudo pacman -S --needed --noconfirm ttf-noto-nerd
 
 # better tiling behaviour
-sudo pacman -S --noconfirm autotiling 
+sudo pacman -S --needed --noconfirm autotiling 
 
 # dark flat theme
-yay -S --noconfirm qogir-gtk-theme
+yay -S --needed --noconfirm qogir-gtk-theme
 
 # dark flat qt kvantum theme style
-yay -S --noconfirm kvantum-theme-qogir-git
+yay -S --needed --noconfirm kvantum-theme-qogir-git

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 # terminal emulator
-sudo pacman -S --noconfirm foot
+sudo pacman -S --needed --noconfirm foot
 
 # user shell, fish plugin manager
-sudo pacman -S --noconfirm fish fisher
+sudo pacman -S --needed --noconfirm fish fisher
 
 # better cat
-sudo pacman -S --noconfirm bat
+sudo pacman -S --needed --noconfirm bat
 
 # better ls
-sudo pacman -S --noconfirm eza
+sudo pacman -S --needed --noconfirm eza
 
 echo "Installing fish plugins..."
 fish -c "fisher install jorgebucaran/hydro"     # prompt

@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 # file manager
-sudo pacman -S --noconfirm thunar
+sudo pacman -S --needed --noconfirm thunar
 
 # for automatically mounting external drives
-sudo pacman -S --noconfirm gvfs
+sudo pacman -S --needed --noconfirm gvfs
 
 # file transfer for phones
-sudo pacman -S --noconfirm gvfs-mtp
+sudo pacman -S --needed --noconfirm gvfs-mtp
 
 # archive manager
-sudo pacman -S --noconfirm file-roller
+sudo pacman -S --needed --noconfirm file-roller
 
 # filesystem interface for userspace
-sudo pacman -S --noconfirm fuse2
+sudo pacman -S --needed --noconfirm fuse2
 
 # mount remote directories
-sudo pacman -S --noconfirm sshfs
+sudo pacman -S --needed --noconfirm sshfs

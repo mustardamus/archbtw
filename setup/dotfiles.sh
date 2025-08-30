@@ -13,7 +13,7 @@ find ./.config -type d -not -path "./.git*" | while read -r local_path; do
 done
 
 # dotfiles manager by symlinking
-sudo pacman -S --noconfirm stow
+sudo pacman -S --needed --noconfirm stow
 
 echo "Symlinking files in parent directory..."
 stow .
