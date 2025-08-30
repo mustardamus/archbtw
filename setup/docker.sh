@@ -9,6 +9,9 @@ sudo pacman -S --needed --noconfirm docker-compose
 # for building containers
 sudo pacman -S --needed --noconfirm docker-buildx
 
+# docker tui
+yay -S --needed --noconfirm lazydocker
+
 echo "Setup non-root Docker execution... (needs reboot)"
 sudo gpasswd -a $USER docker
 
