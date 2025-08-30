@@ -80,3 +80,6 @@ yay -S --needed --noconfirm tailwindcss-bin
 
 # live reload go apps
 yay -S --needed --noconfirm air
+
+# Dockerfile linter
+yay -S --needed --noconfirm hadolint
