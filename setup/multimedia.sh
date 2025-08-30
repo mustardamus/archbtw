@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# version control
-sudo pacman -S --needed --noconfirm git
-
 # screenshot and annotation tool
 sudo pacman -S --needed --noconfirm flameshot
 

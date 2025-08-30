@@ -3,6 +3,9 @@
 # bar for wayland
 sudo pacman -S --needed --noconfirm waybar
 
+yay -S --needed --noconfirm workstyle-git
+# show app icons in waybar
+
 # set gtk theme and icons, cursor
 sudo pacman -S --needed --noconfirm nwg-look
 
@@ -35,4 +38,7 @@ sudo pacman -S --needed --noconfirm xclip
 
 # same as xlip, but for wayland
 sudo pacman -S --needed --noconfirm wl-clipboard
+
+# clipboard manager for wayland
+yay -S --needed --noconfirm clipman
 
