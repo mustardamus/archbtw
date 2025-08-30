@@ -22,4 +22,4 @@ fish_add_path ~/go/bin
 fish_add_path ~/.cargo/bin
 
 source ~/.profile
-mise activate fish | source
+# mise activate fish | source
