@@ -11,3 +11,4 @@ source ./setup/terminal.sh
 source ./setup/lightdm.sh
 source ./setup/web-browser.sh
 source ./setup/snapshots.sh
+source ./setup/ssh.sh
