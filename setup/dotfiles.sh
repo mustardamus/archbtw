@@ -12,6 +12,7 @@ find ./.config -type d -not -path "./.git*" | while read -r local_path; do
 	fi
 done
 
+# dotfiles manager by symlinking
 if ! command -v stow &> /dev/null; then
   sudo pacman -S --noconfirm stow
 fi

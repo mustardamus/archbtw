@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+# version control
 if ! command -v git &> /dev/null; then
   sudo pacman -S --noconfirm git
 fi
 
+# git tui tool
 if ! command -v lazygit &> /dev/null; then
   sudo pacman -S --noconfirm lazygit
 fi
