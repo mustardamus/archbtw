@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+if ! command -v git &> /dev/null; then
+  sudo pacman -S --noconfirm git
+fi
+
+if ! command -v lazygit &> /dev/null; then
+  sudo pacman -S --noconfirm lazygit
+fi
+
 read -p "Git Name: " git_name
 read -p "Git E-Mail: " git_email
 
