@@ -6,4 +6,3 @@ sudo pacman -S --needed --noconfirm xdg-desktop-portal xdg-desktop-portal-wlr xd
 # screen area selection for wlroots
 sudo pacman -S --needed --noconfirm slurp 
 
-echo "For Chrome/Teams screen sharing, enable `chrome://flags/#enable-webrtc-pipewire-capturer` in browser flags."
