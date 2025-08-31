@@ -5,6 +5,7 @@ source ./setup/dotfiles.sh
 source ./setup/git.sh
 source ./setup/yay.sh
 source ./setup/sway.sh
+source ./setup/i3.sh
 source ./setup/file-manager.sh
 source ./setup/screen-sharing.sh
 source ./setup/terminal.sh
