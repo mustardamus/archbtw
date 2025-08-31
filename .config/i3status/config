@@ -12,6 +12,9 @@ general {
 order += "cpu_usage"
 order += "memory"
 order += "disk /"
+order += "volume master"
+order += "read_file mic_status"
+order += "read_file brightness"
 order += "battery 0"
 order += "tztime date"
 order += "tztime time"
@@ -24,29 +27,52 @@ order += "tztime time"
 # }
 
 cpu_usage {
-    format = "CPU %usage"
+    format = " CPU %usage "
 }
 
 memory {
-    format = "MEM %percentage_used"
+    format = " MEM %percentage_used "
 }
 
 disk "/" {
-    format = "DISK %percentage_used"
+    format = " DISK %percentage_used "
 }
 
 battery 0 {
-  format = "BAT %percentage %remaining"
+  format = " BAT %percentage %remaining "
+  format_down = " BAT N/A "
+  status_chr = "CHR"
+  status_bat = "BAT"
+  status_unk = "UNK"
+  status_full = "FULL"
   last_full_capacity = true
   threshold_type=percentage
   low_threshold=10
 }
 
 tztime date {
-    format = "%d.%m.%y"
+    format = " %d.%m.%y "
+}
+
+volume master {
+    format = " VOL %volume "
+    format_muted = " VOL muted "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+read_file mic_status {
+    path = "/tmp/mic_status"
+    format = " MIC %content "
+}
+
+read_file brightness {
+    format = " BRI %content% "
+    path = "/tmp/brightness"
 }
 
 tztime time {
-    format = "%H:%M"
+    format = " %H:%M  "
 }
 

@@ -34,5 +34,5 @@ echo "Setting i3 as default session for LightDM"
 sudo sed -i 's/^#user-session=.*/user-session=i3/' /etc/lightdm/lightdm.conf
 # If the line doesn't exist at all, add it under [Seat:*]
 if ! grep -q "^user-session=" /etc/lightdm/lightdm.conf; then
-    sudo sed -i '/^\[Seat:\*\]/a user-session=i3' /etc/lightdm/lightdm.conf
+	sudo sed -i '/^\[Seat:\*\]/a user-session=i3' /etc/lightdm/lightdm.conf
 fi
