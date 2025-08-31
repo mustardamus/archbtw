@@ -1,6 +1,6 @@
 [font]
 normal = { family = "Inconsolata Nerd Font", style = "Regular" }
-size = 14.6
+size = 9
 offset = { x = 0, y = 0 }
 
 [window]

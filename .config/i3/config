@@ -159,6 +159,10 @@ exec --no-startup-id nm-applet
 # autostart password manager
 exec --no-startup-id keepassxc
 
+# Set GTK theme
+exec --no-startup-id export GTK_THEME=Qogir-Dark
+exec --no-startup-id xsettingsd &
+
 # autostart web browser on first workspace
 exec sleep 3 && i3-msg 'workspace 1; exec --no-startup-id librewolf;'
 

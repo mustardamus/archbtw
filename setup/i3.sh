@@ -14,3 +14,9 @@ sudo pacman -S --needed --noconfirm rofi
 
 # screen lock
 sudo pacman -S --needed --noconfirm xss-lock
+
+# GTK theme daemon for proper theme loading
+sudo pacman -S --needed --noconfirm xsettingsd
+
+# optional: GUI tool for GTK theme configuration
+# sudo pacman -S --needed --noconfirm lxappearance
