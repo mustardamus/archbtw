@@ -188,6 +188,22 @@ No packages installed.
 - **ungoogled-chromium-bin**: Privacy-focused Chromium build [Docs](https://aur.archlinux.org/packages/ungoogled-chromium-bin)
 - **librewolf-bin**: Privacy-focused Firefox fork [Docs](https://aur.archlinux.org/packages/librewolf-bin)
 
+#### Firefox Extensions
+
+- **[OneTab](https://addons.mozilla.org/en-US/firefox/addon/onetab/)**: Converts all open tabs into a list to save memory and reduce clutter
+- **[Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/)**: Blocks invisible trackers automatically by learning tracking behaviors
+- **[KeePassXC Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/)**: Integration with KeePassXC password manager for secure credential autofill
+- **[I Still Don't Care About Cookies](https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/)**: Removes annoying cookie consent banners from websites
+- **[Ghostery](https://addons.mozilla.org/en-US/firefox/addon/ghostery/)**: Powerful privacy protection with tracker blocking and ad removal
+- **[Get RSS Feed URL](https://addons.mozilla.org/en-US/firefox/addon/get-rss-feed-url/)**: Discovers and displays RSS feeds for the current website
+- **[YouTube Addon](https://addons.mozilla.org/en-US/firefox/addon/youtube-addon/)**: Enhances YouTube experience with additional features and controls
+- **[Easy YouTube Video Downloader](https://addons.mozilla.org/en-US/firefox/addon/easy-youtube-video-download/)**: Download YouTube videos in various formats and qualities
+- **[DuckDuckGo Lite Search Provider](https://addons.mozilla.org/en-US/firefox/addon/ddg-lite-search-provider/)**: Adds DuckDuckGo Lite as a search engine option for minimal, privacy-focused search
+- **[Disconnect](https://addons.mozilla.org/en-US/firefox/addon/disconnect/)**: Visualizes and blocks invisible tracking from over 2,000 third-party sites
+- **[Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)**: Protects privacy by locally hosting CDN resources to prevent tracking
+- **[Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)**: Creates dark mode for every website with customizable brightness and contrast
+- **[Tokyo Night](https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/)**: Beautiful dark theme inspired by Tokyo Night color scheme
+
 ### [yay.sh](./setup/yay.sh)
 
 - **git**: Distributed version control system [Docs](https://git-scm.com/doc)

@@ -19,6 +19,7 @@ librewolf \
 	https://addons.mozilla.org/en-US/firefox/addon/ddg-lite-search-provider/ \
 	https://addons.mozilla.org/en-US/firefox/addon/disconnect/ \
 	https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/ \
+	https://addons.mozilla.org/en-US/firefox/addon/darkreader/ \
 	https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/
 
 # https://addons.mozilla.org/en-US/firefox/addon/qogir-dark-for-firefox
