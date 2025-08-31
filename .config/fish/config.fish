@@ -23,3 +23,8 @@ fish_add_path ~/.cargo/bin
 
 source ~/.profile
 mise activate fish | source
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/mustardamus/.lmstudio/bin
+# End of LM Studio CLI section
+
