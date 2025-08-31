@@ -17,7 +17,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # start a terminal
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec alacritty
 
 # start a browser
 bindsym $mod+Shift+Return exec librewolf
