@@ -126,6 +126,82 @@ Fish shell automatically adds these to PATH:
 - **Color Scheme**: Tokyo Night theme (used in i3, terminals, etc.)
 - **Compositor**: picom for tear-free rendering (i3 only)
 
+## Keybindings
+
+### Common Keybindings (Both i3 and Sway)
+
+#### Application Launchers
+- `Super+Return` - Terminal (alacritty/foot)
+- `Super+Shift+Return` - Web browser (LibreWolf)
+- `Super+Alt+Return` - File manager (Thunar)
+- `Super+Alt+1` - RSS reader (Liferea)
+- `Super+Alt+2` - Chromium browser
+- `Super+Space` - Application launcher (rofi/fuzzel)
+
+#### Window Management
+- `Super+Shift+Q` - Kill focused window
+- `Super+F` - Toggle fullscreen
+- `Super+Shift+Space` - Toggle floating/tiling
+- `Super+Alt+Space` - Focus mode toggle (floating/tiling)
+
+#### Focus Movement
+- `Super+H/J/K/L` - Focus left/down/up/right (i3: J/K/L/O)
+- `Super+Arrow Keys` - Focus left/down/up/right
+
+#### Window Movement
+- `Super+Shift+H/J/K/L` - Move window left/down/up/right (i3: J/K/L/O)
+- `Super+Shift+Arrow Keys` - Move window left/down/up/right
+
+#### Layout Management
+- `Super+S` - Stacking layout
+- `Super+W` - Tabbed layout
+- `Super+E` - Toggle split layout
+- `Super+H/B` - Split horizontal (i3: H, Sway: B)
+- `Super+V` - Split vertical
+
+#### Workspace Management
+- `Super+1-9/0` - Switch to workspace 1-10
+- `Super+Shift+1-9/0` - Move container to workspace 1-10
+
+#### System Control
+- `Super+Shift+C` - Reload configuration
+- `Super+Shift+R` - Restart i3 (i3 only)
+- `Super+Shift+E` - Exit session
+
+#### Resize Mode
+- `Super+R` - Enter resize mode
+- In resize mode:
+  - `H/J/K/L` or Arrow Keys - Resize window
+  - `Return/Escape` - Exit resize mode
+
+#### Scratchpad (Sway only)
+- `Super+Shift+Minus` - Move window to scratchpad
+- `Super+Minus` - Show/hide scratchpad
+
+### Hardware Keys
+
+#### Audio Control
+- `XF86AudioRaiseVolume` - Increase volume (+2% i3, +5% Sway)
+- `XF86AudioLowerVolume` - Decrease volume (-2% i3, -5% Sway)
+- `XF86AudioMute` - Toggle audio mute
+- `XF86AudioMicMute` - Toggle microphone mute
+
+#### Brightness Control
+- `XF86MonBrightnessUp` - Increase brightness (+1% i3, +5% Sway)
+- `XF86MonBrightnessDown` - Decrease brightness (-1% i3, -5% Sway)
+
+#### Screenshots
+- `Super+Print` - Take screenshot (flameshot i3, grim Sway)
+
+### i3-Specific Keybindings
+- `Super+A` - Focus parent container
+- `Super+C` - Focus child container
+- `Super+Shift+M` - Run monitor setup script
+- `Super+?` - Show keymap overlay (Sway only)
+
+### Focus Parent/Child
+- `Super+A` - Focus parent container (both)
+
 ## Important Notes
 
 - Configuration uses German keyboard layout (`de`)

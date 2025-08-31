@@ -25,6 +25,12 @@ bindsym $mod+Shift+Return exec librewolf
 # start a filebrowser
 bindsym $mod+$alt+Return exec thunar
 
+# start liferea (RSS reader)
+bindsym $mod+$alt+1 exec liferea
+
+# start chromium
+bindsym $mod+$alt+2 exec chromium
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
