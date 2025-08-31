@@ -208,3 +208,123 @@ No packages installed.
 
 - **git**: Distributed version control system [Docs](https://git-scm.com/doc)
 - **base-devel**: Basic tools to build packages [Docs](https://archlinux.org/groups/x86_64/base-devel/)
+
+## Keybindings
+
+### i3 Keybindings
+
+| Keybinding              | Action                         |
+| ----------------------- | ------------------------------ |
+| `Super+Return`          | Open terminal (Alacritty)      |
+| `Super+Shift+Return`    | Open browser (LibreWolf)       |
+| `Super+Alt+Return`      | Open file manager (Thunar)     |
+| `Super+Alt+1`           | Open RSS reader (Liferea)      |
+| `Super+Alt+2`           | Open Chromium browser          |
+| `Super+Space`           | Application launcher (Rofi)    |
+| `Super+Shift+Q`         | Close focused window           |
+| `Super+F`               | Toggle fullscreen              |
+| `Super+Shift+Space`     | Toggle floating mode           |
+| `Super+Alt+Space`       | Focus between tiling/floating  |
+| `Super+A`               | Focus parent container         |
+| `Super+C`               | Focus child container          |
+| `Super+J/K/L/O`         | Focus left/down/up/right       |
+| `Super+Arrows`          | Focus direction                |
+| `Super+Shift+J/K/L/O`   | Move window left/down/up/right |
+| `Super+Shift+Arrows`    | Move window direction          |
+| `Super+H`               | Split horizontally             |
+| `Super+V`               | Split vertically               |
+| `Super+S`               | Stacking layout                |
+| `Super+W`               | Tabbed layout                  |
+| `Super+E`               | Toggle split layout            |
+| `Super+1-9,0`           | Switch to workspace 1-10       |
+| `Super+Shift+1-9,0`     | Move window to workspace 1-10  |
+| `Super+R`               | Resize mode                    |
+| `Super+Shift+C`         | Reload config                  |
+| `Super+Shift+R`         | Restart i3                     |
+| `Super+Shift+E`         | Exit i3                        |
+| `Super+Print`           | Take screenshot (Flameshot)    |
+| `Super+Shift+M`         | Run monitor setup script       |
+| `XF86AudioRaiseVolume`  | Volume up (+2%)                |
+| `XF86AudioLowerVolume`  | Volume down (-2%)              |
+| `XF86AudioMute`         | Toggle mute                    |
+| `XF86AudioMicMute`      | Toggle mic mute                |
+| `XF86MonBrightnessUp`   | Brightness up (+1%)            |
+| `XF86MonBrightnessDown` | Brightness down (-1%)          |
+
+### Sway Keybindings
+
+| Keybinding              | Action                         |
+| ----------------------- | ------------------------------ |
+| `Super+Return`          | Open terminal (Foot)           |
+| `Super+Shift+Return`    | Open browser (LibreWolf)       |
+| `Super+Alt+Return`      | Open file manager (Thunar)     |
+| `Super+Alt+1`           | Open RSS reader (Liferea)      |
+| `Super+Alt+2`           | Open Chromium browser          |
+| `Super+Space`           | Application launcher (Fuzzel)  |
+| `Super+Shift+Q`         | Close focused window           |
+| `Super+F`               | Toggle fullscreen              |
+| `Super+Shift+Space`     | Toggle floating mode           |
+| `Super+Alt+Space`       | Focus between tiling/floating  |
+| `Super+A`               | Focus parent container         |
+| `Super+H/J/K/L`         | Focus left/down/up/right       |
+| `Super+Arrows`          | Focus direction                |
+| `Super+Shift+H/J/K/L`   | Move window left/down/up/right |
+| `Super+Shift+Arrows`    | Move window direction          |
+| `Super+B`               | Split horizontally             |
+| `Super+V`               | Split vertically               |
+| `Super+S`               | Stacking layout                |
+| `Super+W`               | Tabbed layout                  |
+| `Super+E`               | Toggle split layout            |
+| `Super+1-9,0`           | Switch to workspace 1-10       |
+| `Super+Shift+1-9,0`     | Move window to workspace 1-10  |
+| `Super+R`               | Resize mode                    |
+| `Super+Shift+C`         | Reload config                  |
+| `Super+Shift+E`         | Exit Sway                      |
+| `Super+Print`           | Take screenshot (Grim)         |
+| `Super+?`               | Show keymap overlay            |
+| `Super+Shift+-`         | Move to scratchpad             |
+| `Super+-`               | Show scratchpad                |
+| `XF86AudioRaiseVolume`  | Volume up (+5%)                |
+| `XF86AudioLowerVolume`  | Volume down (-5%)              |
+| `XF86AudioMute`         | Toggle mute                    |
+| `XF86AudioMicMute`      | Toggle mic mute                |
+| `XF86MonBrightnessUp`   | Brightness up (+5%)            |
+| `XF86MonBrightnessDown` | Brightness down (-5%)          |
+
+## Autostart Applications
+
+### i3 Autostart
+
+| Application     | Purpose                                       |
+| --------------- | --------------------------------------------- |
+| `xss-lock`      | Screen locker on suspend/idle                 |
+| `nm-applet`     | NetworkManager system tray                    |
+| `keepassxc`     | Password manager                              |
+| `xsettingsd`    | X settings daemon for GTK themes              |
+| `autotiling`    | Automatic tiling for better window management |
+| `picom`         | Compositor for tear-free rendering            |
+| `brightness.sh` | Monitor brightness levels                     |
+| `mic_status.sh` | Monitor microphone status                     |
+| `librewolf`     | Web browser on workspace 1                    |
+
+### Sway Autostart
+
+| Application                          | Purpose                        |
+| ------------------------------------ | ------------------------------ |
+| `workstyle`                          | Dynamic workspace naming       |
+| `autotiling`                         | Automatic tiling (max depth 2) |
+| `waybar`                             | Status bar                     |
+| `nm-applet`                          | NetworkManager system tray     |
+| `keepassxc`                          | Password manager               |
+| `librewolf`                          | Web browser on workspace 1     |
+| `clipman`                            | Clipboard manager              |
+| `mako`                               | Notification daemon            |
+| `dbus-update-activation-environment` | D-Bus environment setup        |
+
+### Window Rules
+
+Both window managers are configured to:
+
+- Place Transmission (BitTorrent client) on workspace 9
+- Place KeePassXC (password manager) on workspace 10
+- Apply specific floating rules for dialogs and picture-in-picture windows
