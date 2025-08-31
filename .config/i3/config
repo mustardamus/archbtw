@@ -166,6 +166,9 @@ exec --no-startup-id xsettingsd &
 # better tiling behaviour
 exec --no-startup-id autotiling &
 
+# compositor for tear-free rendering
+exec --no-startup-id picom -b
+
 # autostart web browser on first workspace
 exec sleep 3 && i3-msg 'workspace 1; exec --no-startup-id librewolf;'
 
