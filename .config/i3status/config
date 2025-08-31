@@ -1,0 +1,52 @@
+# https://man.archlinux.org/man/i3status.1
+
+general {
+  colors = true
+  color_good = "#545c7e"
+  color_degraded = "#ffc777"
+  color_bad = "#ff007c"
+  interval = 5
+}
+
+# order += "read_file shortcuts"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "battery 0"
+order += "tztime date"
+order += "tztime time"
+
+
+# read_file shortcuts {
+	# path = "~/.config/i3/apps.txt"
+	# format = "%content"
+	# color_good = "#dddddd"
+# }
+
+cpu_usage {
+    format = "CPU %usage"
+}
+
+memory {
+    format = "MEM %percentage_used"
+}
+
+disk "/" {
+    format = "DISK %percentage_used"
+}
+
+battery 0 {
+  format = "BAT %percentage %remaining"
+  last_full_capacity = true
+  threshold_type=percentage
+  low_threshold=10
+}
+
+tztime date {
+    format = "%d.%m.%y"
+}
+
+tztime time {
+    format = "%H:%M"
+}
+
