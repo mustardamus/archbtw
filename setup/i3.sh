@@ -20,3 +20,9 @@ sudo pacman -S --needed --noconfirm xsettingsd
 
 # optional: GUI tool for GTK theme configuration
 # sudo pacman -S --needed --noconfirm lxappearance
+
+# xinput for input device configuration
+sudo pacman -S --needed --noconfirm xorg-xinput
+
+echo "Enabling tap-to-click for touchpad"
+sudo cp ~/.config/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
