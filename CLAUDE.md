@@ -90,12 +90,17 @@ The `setup.sh` orchestrates modular installation scripts:
 - **Monitor setup**: `Super+Shift+M` (manual trigger for external monitor)
 - **Screenshot**: `Super+Print` (flameshot)
 
-### External Monitor Setup
-The monitor setup script (`~/.config/i3/monitor_setup.sh`) automatically:
+### External Monitor Setup (DisplayLink)
+**Note**: DisplayLink service is disabled by default to prevent system freezes. It only starts when needed.
+
+The monitor setup script (`~/.config/i3/monitor_setup.sh`) triggered by `Super+Shift+M`:
+- Starts DisplayLink service on-demand (only when triggered)
+- Loads evdi kernel module if needed
 - Detects ZenScreen via DVI-I-1-1 connection
 - Configures 1366x768 resolution with left rotation
 - Moves workspaces 4-8 to external monitor
 - Returns focus to workspace 1
+- Stops DisplayLink if monitor not detected (saves resources)
 
 ## Development Environment
 
@@ -209,3 +214,4 @@ Fish shell automatically adds these to PATH:
 - AMD GPU TearFree enabled for better graphics performance
 - Autotiling enabled for improved window management
 - System uses BTRFS with Snapper snapshots and LUKS encryption
+- DisplayLink disabled by default to prevent freezes (see `notes/x11_freezing.md` for details)
