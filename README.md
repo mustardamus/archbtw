@@ -5,6 +5,8 @@
 ### [ai.sh](./setup/ai.sh)
 
 - **lmstudio**: Local LLM runner and chat interface [Docs](https://lmstudio.ai/docs/app)
+- **opencl-mesa**: OpenCL implementation for AMD GPUs [Docs](https://wiki.archlinux.org/title/GPGPU#OpenCL_Runtime)
+- **clinfo**: OpenCL device information tool [Docs](https://github.com/Oblomov/clinfo)
 
 ### [battery.sh](./setup/battery.sh)
 
