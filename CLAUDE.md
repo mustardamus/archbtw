@@ -79,6 +79,8 @@ The `setup.sh` orchestrates modular installation scripts:
 - `cli.sh` - Command-line development tools
 - `editor.sh` - Helix editor and language servers
 - `dotfiles.sh` - GNU Stow setup for configuration management
+- `gpu.sh` - AMD GPU drivers, OpenCL support, and GPU diagnostics
+- `battery.sh` - Power management tools for laptops
 
 ## Window Manager Specifics
 
@@ -210,8 +212,9 @@ Fish shell automatically adds these to PATH:
 ## Important Notes
 
 - Configuration uses German keyboard layout (`de`)
-- TouchPad tap-to-click enabled via X11 configuration
-- AMD GPU TearFree enabled for better graphics performance
+- TouchPad tap-to-click enabled with adaptive acceleration via X11 configuration
+- AMD GPU TearFree enabled for better graphics performance (configured via `20-amdgpu.conf`)
 - Autotiling enabled for improved window management
 - System uses BTRFS with Snapper snapshots and LUKS encryption
 - DisplayLink disabled by default to prevent freezes (see `notes/x11_freezing.md` for details)
+- Picom compositor uses safer settings to prevent system freezes

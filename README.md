@@ -2,11 +2,12 @@
 
 ## Packages
 
-### [ai.sh](./setup/ai.sh)
+### [gpu.sh](./setup/gpu.sh)
 
 - **lmstudio**: Local LLM runner and chat interface [Docs](https://lmstudio.ai/docs/app)
 - **opencl-mesa**: OpenCL implementation for AMD GPUs [Docs](https://wiki.archlinux.org/title/GPGPU#OpenCL_Runtime)
 - **clinfo**: OpenCL device information tool [Docs](https://github.com/Oblomov/clinfo)
+- **mesa-utils**: OpenGL diagnostic utilities (glxinfo, glxgears) [Docs](https://docs.mesa3d.org/)
 
 ### [battery.sh](./setup/battery.sh)
 
@@ -304,7 +305,7 @@ No packages installed.
 | `keepassxc`     | Password manager                              |
 | `xsettingsd`    | X settings daemon for GTK themes              |
 | `autotiling`    | Automatic tiling for better window management |
-| `picom`         | Compositor for tear-free rendering            |
+| `picom`         | Compositor with safer settings for stability  |
 | `brightness.sh` | Monitor brightness levels                     |
 | `mic_status.sh` | Monitor microphone status                     |
 | `librewolf`     | Web browser on workspace 1                    |

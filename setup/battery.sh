@@ -13,3 +13,16 @@ echo "Enable tlp on startup..."
 sudo systemctl start tlp
 sudo systemctl enable tlp
 
+echo "Setting swappiness..."
+echo "vm.swappiness=10" | sudo tee /etc/sysctl.d/99-swappiness.conf
+
+echo "Enable fstrim..."
+sudo systemctl enable --now fstrim.timer
+
+# cpu thermal monitor
+sudo pacman -S thermald
+sudo systemctl enable --now thermald.service
+
+# multi core optimization
+sudo pacman -S irqbalance
+sudo systemctl enable --now irqbalance.service
