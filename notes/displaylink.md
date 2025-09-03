@@ -13,10 +13,17 @@ When using the external USB monitor (ZenScreen via DisplayLink) with picom compo
 - Switched picom backend from `xrender` to `glx` in `.config/picom/picom.conf`
 - GLX backend properly renders the cursor across the entire display area
 
-### Fallback Strategy
+### Automated Solution (Implemented)
+The monitor setup script now automatically manages picom:
+- **When DVI USB monitor is connected**: Automatically kills picom to prevent cursor visibility issues
+- **When DVI USB monitor is disconnected**: Automatically starts picom again
+
+This is handled in `.config/i3/monitor_setup.sh` triggered by `Super+Shift+M`.
+
+### Manual Fallback Strategy
 If GLX backend causes system freezes (AMD GPU issues):
 1. Switch back to `xrender` backend in picom.conf
-2. Disable picom when using the USB monitor:
+2. Manual picom control (now automated in monitor setup script):
    ```bash
    pkill picom  # When connecting USB monitor
    picom -b     # When disconnecting USB monitor
