@@ -1,12 +1,51 @@
 # X11 Desktop Freezing Issues - Investigation & Fixes
 
 ## Investigation Date: 2025-09-01
+## Updated: 2025-09-03 - Added AMD TearFree freeze solution
 
 ### System Information
 - **Window Manager**: i3 with picom compositor
 - **GPU**: AMD Radeon (amdgpu driver)
 - **External Monitor**: ASUS ZenScreen via DisplayLink USB (DVI-I-1-1)
 - **Kernel**: Linux 6.16.4-arch1-1
+
+## Critical Fix - AMD TearFree Input Freeze (2025-09-03)
+
+### Problem
+- **Symptoms**: Mouse pointer moves but clicks don't register, audio continues playing
+- **Cause**: AMD TearFree option causes input subsystem freezes on X11
+- **Research**: Confirmed issue in 2024 with AMD GPUs when TearFree enabled
+
+### Solution Applied
+1. **Disabled TearFree** in `~/.config/20-amdgpu.conf`:
+   ```conf
+   Option "TearFree" "false"  # Was "true" - causing input freezes
+   ```
+   Also disabled in `/etc/X11/xorg.conf.d/20-amdgpu.conf`
+
+2. **Recommended Kernel Parameters** for AMD GPU stability:
+   Add to `/etc/default/grub`:
+   ```bash
+   GRUB_CMDLINE_LINUX_DEFAULT="... amdgpu.sg_display=0 amdgpu.noretry=0 amdgpu.dcdebugmask=0x10 iommu=pt split_lock_detect=off"
+   ```
+   - `amdgpu.sg_display=0`: Disables scatter-gather display (reduces freezes)
+   - `amdgpu.noretry=0`: Allows GPU retry on page faults
+   - `amdgpu.dcdebugmask=0x10`: Debug mask for display controller issues
+   - `iommu=pt`: Pass-through mode for IOMMU (reduces conflicts)
+   - `split_lock_detect=off`: Prevents CPU lock detection freezes
+
+3. **Picom Safer Settings**:
+   ```conf
+   backend = "xrender"  # More stable than "glx" for AMD
+   vsync = true
+   use-damage = false   # Prevents damage tracking issues
+   ```
+
+### Emergency Recovery Methods
+- **TTY Switch**: Ctrl+Alt+F2 then Ctrl+Alt+F1 (most reliable)
+- **Screen Lock**: Ctrl+Alt+L can reset X11 state
+- **Restart WM**: `DISPLAY=:0 i3 --replace` from TTY
+- **Magic SysRq**: Alt+SysRq+R,E,I,S,U,B (safe reboot)
 
 ## Issues Found in Logs
 
