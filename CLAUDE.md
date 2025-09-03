@@ -16,7 +16,11 @@ This is an Arch Linux system configuration repository for setting up a complete 
 ### Configuration Management
 - **Dotfiles**: Managed via GNU Stow for symlink-based configuration
 - **Package Management**: Uses `pacman` for official packages and `yay` for AUR packages
-- **Shell**: Fish shell with custom functions and hydro prompt theme
+- **Shell**: Fish shell with Fisher plugin manager and the following plugins:
+  - [Hydro](https://github.com/jorgebucaran/hydro) - Ultra-pure, lag-free prompt with async Git status
+  - [Pisces](https://github.com/laughedelic/pisces) - Autoclose paired symbols like brackets and quotes
+  - [fish-ssh-agent](https://github.com/danhper/fish-ssh-agent) - SSH agent management for Fish shell
+  - [z](https://github.com/jethrokuan/z) - Pure-fish directory jumping based on frequency and recency
 
 ## Key Commands
 

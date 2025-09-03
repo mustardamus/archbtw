@@ -16,4 +16,4 @@ echo "Installing fish plugins..."
 fish -c "fisher install jorgebucaran/hydro"     # prompt
 fish -c "fisher install laughedelic/pisces"     # autoclose "" ()
 fish -c "fisher install danhper/fish-ssh-agent" # ssh agent
-
+fish -c "fisher install jethrokuan/z"           # quick directory junping
