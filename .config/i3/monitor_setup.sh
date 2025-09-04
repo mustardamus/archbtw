@@ -28,19 +28,19 @@ if xrandr | grep -q "DVI-I-1-1"; then
 fi
 
 # Manage picom based on ZenScreen connection
-if [ "$ZENSCREEN_CONNECTED" = true ]; then
-	# Kill picom when DVI USB monitor is connected
-	if pgrep -x picom > /dev/null; then
-		echo "Killing picom for DVI USB monitor compatibility..."
-		pkill picom
-	fi
-else
-	# Start picom when DVI USB monitor is not connected
-	if ! pgrep -x picom > /dev/null; then
-		echo "Starting picom..."
-		picom --daemon
-	fi
-fi
+# if [ "$ZENSCREEN_CONNECTED" = true ]; then
+# 	# Kill picom when DVI USB monitor is connected
+# 	if pgrep -x picom > /dev/null; then
+# 		echo "Killing picom for DVI USB monitor compatibility..."
+# 		pkill picom
+# 	fi
+# else
+# 	# Start picom when DVI USB monitor is not connected
+# 	if ! pgrep -x picom > /dev/null; then
+# 		echo "Starting picom..."
+# 		picom --daemon
+# 	fi
+# fi
 
 # Configure monitors based on what's connected
 if [ "$HDMI_CONNECTED" = true ] && [ "$ZENSCREEN_CONNECTED" = true ]; then
