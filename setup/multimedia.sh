@@ -26,3 +26,6 @@ sudo pacman -S --needed --noconfirm liferea
 
 # password manager
 sudo pacman -S --needed --noconfirm keepassxc
+
+# free music streaming and download
+yay -S nuclear-player-bin
