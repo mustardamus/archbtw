@@ -76,14 +76,18 @@ for_window [window_type="dialog"] floating enable, border pixel 1
 input type:touchpad {
     dwt enabled
     tap enabled
+    tap_button_map lrm
     natural_scroll disabled
     middle_emulation disabled
-    click_method button_areas
-    left_handed enabled
+    click_method clickfinger
+    accel_profile adaptive
+    pointer_accel 0.3
 }
 
 input type:keyboard {
     xkb_layout "de"
+    repeat_delay 300
+    repeat_rate 30
 }
 
 bindsym $mod+$alt+1 exec liferea
@@ -173,6 +177,7 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86Display exec bash ~/.config/i3/brightness_toggle.sh
 
 bindsym $mod+Print exec grim
 
