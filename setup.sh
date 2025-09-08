@@ -18,6 +18,7 @@ source ./setup/multimedia.sh
 source ./setup/languages.sh
 source ./setup/nodejs.sh
 source ./setup/docker.sh
+source ./setup/podman.sh
 source ./setup/battery.sh
 source ./setup/editor.sh
 source ./setup/gpu.sh
