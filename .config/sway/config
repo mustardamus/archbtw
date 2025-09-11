@@ -38,7 +38,7 @@ exec bash -c "echo 0 | sudo tee /sys/class/leds/platform::micmute/brightness"
 # open apps on specific workspace
 # find app_id/title with `swaymsg -t get_tree`
 assign [title="Transmission"] 9
-assign [class="KeePassXC"] 10
+assign [title="KeePassXC"] 10
 
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 1
 for_window [app_id="^keymap-overlay$"] floating enable, sticky enable, resize set 50 ppt 70 ppt, border pixel 1
