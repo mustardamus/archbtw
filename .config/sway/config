@@ -180,6 +180,8 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86Display exec bash ~/.config/i3/brightness_toggle.sh
 
 bindsym $mod+Print exec grim
+# Fn+F11 key for monitor setup
+bindcode 455 exec bash ~/.config/sway/monitor_setup.sh
 
 bindsym $mod+question exec $term -a keymap-overlay -e helix ~/notes/keymap.md
 
