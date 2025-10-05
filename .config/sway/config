@@ -185,6 +185,9 @@ bindcode 455 exec bash ~/.config/sway/monitor_setup.sh
 
 bindsym $mod+question exec $term -a keymap-overlay -e helix ~/notes/keymap.md
 
+# Lock screen when lid is closed
+bindswitch --reload --locked lid:on exec swaylock -f -c 000000
+
 # Qogir-Dark theme colors
 set $bg      #282A33
 set $bg_sec  #32343D
