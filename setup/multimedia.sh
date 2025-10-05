@@ -28,4 +28,7 @@ sudo pacman -S --needed --noconfirm liferea
 sudo pacman -S --needed --noconfirm keepassxc
 
 # free music streaming and download
-yay -S nuclear-player-bin
+# yay -S nuclear-player-bin
+
+# disks utility
+sudo pacman -S --needed --noconfirm gnome-disk-utility
