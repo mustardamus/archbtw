@@ -175,7 +175,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id keepassxc
 
 # Set GTK theme
-exec --no-startup-id export GTK_THEME=Qogir-Dark
+exec --no-startup-id export GTK_THEME=Qogir-Round-Dark
 exec --no-startup-id xsettingsd &
 
 # better tiling behaviour

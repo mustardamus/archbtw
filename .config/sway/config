@@ -15,7 +15,7 @@ set $right l
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Qogir-Dark'
+    gsettings set $gnome-schema gtk-theme 'Qogir-Round-Dark'
     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
     gsettings set $gnome-schema font-name 'NotoSans Nerd Font 11'
     gsettings set $gnome-schema monospace-font-name 'Inconsolata Nerd Font 11'
