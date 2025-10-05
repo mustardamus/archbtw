@@ -124,3 +124,7 @@
 **/.mise/**
 **/.local/state
 **/.local/state/**
+
+# LMStudio
+**/.lmstudio/models
+**/.lmstudio/models/**
